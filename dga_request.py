@@ -1,9 +1,4 @@
 '''
-      _             _          
-  _ _(_)_ _____ _ _(_)_ _  ___ 
- | '_| \ V / -_) '_| | ' \/ -_)
- |_| |_|\_/\___|_| |_|_||_\___|
-
  # @ Author: Lucas Glasner (lgvivanco96@gmail.com)
  # @ Create Time: 1969-12-31 21:00:00
  # @ Modified by: Lucas Glasner, 
@@ -105,6 +100,6 @@ def dga_download_request(dga_curl, fileprefix, output_dir, startyear, endyear):
 if __name__ == '__main__':
     path_DGA_curl = 'DGA_cURL'
     DGA_curl = open(path_DGA_curl).read()
-    response, _ = dga_download_request(DGA_curl, 'Pozo_Parcela2SanRamon',
+    response, _ = dga_download_request(DGA_curl, 'RioLigua',
                                        'tmp',
-                                       1990, 2023)
+                                       2010, 2014)

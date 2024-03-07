@@ -1,9 +1,4 @@
 '''
-      _             _          
-  _ _(_)_ _____ _ _(_)_ _  ___ 
- | '_| \ V / -_) '_| | ' \/ -_)
- |_| |_|\_/\___|_| |_|_||_\___|
-
  # @ Author: Lucas Glasner (lgvivanco96@gmail.com)
  # @ Create Time: 1969-12-31 21:00:00
  # @ Modified by: Lucas Glasner, 
@@ -38,6 +33,6 @@ def fix_dga_excel(paths, **kwargs):
 
 
 if __name__ == '__main__':
-    name = 'Pozo_Parcela2SanRamon'
+    name = 'RioLigua'
     data = fix_dga_excel(glob(f'tmp/{name}*'))
     data.to_csv(f'data/{name}.csv')
