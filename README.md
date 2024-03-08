@@ -8,11 +8,13 @@ The idea is the following:
 3)  Solve the captcha manually
 4)  Inspect the download button
 
-<img src="./static/DGA_download.png" alt="download.png" width="50%"/>
+<!-- <img src="./static/DGA_download.png" alt="download.png" width="50%"/> -->
+
+![alt text](https://github.com/lucasglasner/queryDGA/blob/main/static/DGA_download.png)
 
 5)  Go to network oprtions, press the button and then get the cURL (POSIX) request
 
-<img src="./static/DGA_cURL.png" alt="curl.png" width="50%"/>
+<!-- <img src="./static/DGA_cURL.png" alt="curl.png" width="50%"/> -->
 
 6)  Copy-paste to DGA_cURL textfile of this repository
 7)  Use dga_request.py utility program for massive download
