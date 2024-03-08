@@ -95,11 +95,9 @@ def dga_download_request(dga_curl, fileprefix, output_dir, startyear, endyear):
     return response, (headers, cookies, data)
 
 
-# data = pd.read_excel('tmp/pozo_2004.xls')
-
 if __name__ == '__main__':
     path_DGA_curl = 'DGA_cURL'
-    DGA_curl = open(path_DGA_curl).read()
+    DGA_curl = open(path_DGA_curl).read()  # <--- Open cURL string
     response, _ = dga_download_request(DGA_curl, 'RioLigua',
                                        'tmp',
                                        2010, 2014)
