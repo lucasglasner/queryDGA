@@ -10,7 +10,7 @@ The idea is the following:
 
 ![alt text](https://github.com/lucasglasner/queryDGA/blob/main/static/DGA_download.png)
 
-5)  Go to network oprtions, press the button and then get the cURL (POSIX) request
+5)  Go to network options, press the button and then get the cURL (POSIX) request
 
 ![alt text](https://github.com/lucasglasner/queryDGA/blob/main/static/DGA_cURL.png)
 
@@ -22,7 +22,7 @@ The idea is the following:
 ### dga_request.py
 
 This script can be run in two ways: 
-1) Edit the last chunk of the script and the run from the shell:
+1) Edit the last chunk of the script and run from the shell or your favorite GUI:
 ```python
 if __name__ == '__main__':
     path_DGA_curl = 'DGA_cURL'
