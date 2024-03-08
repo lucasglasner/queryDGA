@@ -37,7 +37,7 @@ if __name__ == '__main__':
 $ python3 dga_request.py
 ```
 
-2) Import the functions inside the script and use them directly on your own routines:
+2) Import the functions and use them directly on your own routines:
 ```python
 import sys
 pathtothisrepository='/blabla/blabla/'
