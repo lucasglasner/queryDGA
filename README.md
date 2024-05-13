@@ -10,7 +10,8 @@ The idea is the following:
 5)  Go to network options, press the button and then get the cURL (POSIX) request
 6)  Go to [https://curlconverter.com/json/](https://curlconverter.com/json/) and transform cURL request to json
 7)  Copy json content to DGA_cURL.json file
-8)  Check DGA_query.ipynb and DGA_process.ipynb notebooks to learn how to use the package.
+8)  Check DGA_query.ipynb to learn how to download
+9)  Check DGA_process.ipynb to postprocess the spreadsheets
 
 ---
 
