@@ -25,3 +25,12 @@ The idea is the following:
 9) Check DGA_process.ipynb to postprocess the spreadsheets
 
 ---
+
+### Dependencies
+
+* requests
+* numpy
+* pandas
+* openpyxl
+* tqdm
+* json
