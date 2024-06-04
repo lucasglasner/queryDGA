@@ -27,7 +27,7 @@ def DGAGrab_Metadata(DGA_excel):
 def process_DGA_QTable(DGA_excel):
     # Drop usesless stuff from spreadsheet and compute metadata
     DGA_excel = DGA_excel.T.dropna(how='all').T
-    metadata = DGAGrab_Metadata(DGA_excel)
+    metadata  = DGAGrab_Metadata(DGA_excel)
 
     # grab only necesary cells
     months = DGA_excel[DGA_excel.iloc[:, 0].map(lambda x: 'MES' in str(x))]
