@@ -11,16 +11,16 @@
         "__uzmb": "1717517328",
         "__uzme": "2095",
         "JSESSIONID": "0000crSEmxEQm6t0AuCFRgUokbx:-1",
-        "_ga_Y8S34E0V2R": "GS1.1.1717537557.3.0.1717537559.58.0.787361174",
-        "__uzmc": "7885520847035",
-        "__uzmd": "1717537599"
+        "_ga_Y8S34E0V2R": "GS1.1.1717540618.4.0.1717540716.60.0.1450953009",
+        "__uzmc": "7195028330589",
+        "__uzmd": "1717541915"
     },
     "headers": {
         "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
         "accept-language": "en,es-419;q=0.9,es;q=0.8",
         "cache-control": "max-age=0",
         "content-type": "application/x-www-form-urlencoded",
-        "cookie": "__uzmcj3=1223353811723; __uzmdj3=1715633677; _ga_WJ4EB18XSX=GS1.1.1717450741.9.0.1717450741.0.0.0; _ga=GA1.1.376619518.1717517326; __uzma=b26b57fb-e970-4185-9177-fc7651c7e2ec; __uzmb=1717517328; __uzme=2095; JSESSIONID=0000crSEmxEQm6t0AuCFRgUokbx:-1; _ga_Y8S34E0V2R=GS1.1.1717537557.3.0.1717537559.58.0.787361174; __uzmc=7885520847035; __uzmd=1717537599",
+        "cookie": "__uzmcj3=1223353811723; __uzmdj3=1715633677; _ga_WJ4EB18XSX=GS1.1.1717450741.9.0.1717450741.0.0.0; _ga=GA1.1.376619518.1717517326; __uzma=b26b57fb-e970-4185-9177-fc7651c7e2ec; __uzmb=1717517328; __uzme=2095; JSESSIONID=0000crSEmxEQm6t0AuCFRgUokbx:-1; _ga_Y8S34E0V2R=GS1.1.1717540618.4.0.1717540716.60.0.1450953009; __uzmc=7195028330589; __uzmd=1717541915",
         "origin": "https://snia.mop.gob.cl",
         "referer": "https://snia.mop.gob.cl/BNAConsultas/reportes",
         "sec-ch-ua": "\"Opera GX\";v=\"109\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
@@ -36,22 +36,22 @@
     "data": {
         "filtroscirhform": "filtroscirhform",
         "filtroscirhform:regionFieldSetId-value": "true",
-        "filtroscirhform:j_idt30-value": "filtroscirhform:j_idt35",
-        "filtroscirhform:j_idt40": "on",
+        "filtroscirhform:j_idt30-value": "filtroscirhform:j_idt45",
+        "filtroscirhform:j_idt59": "on",
         "filtroscirhform:panelFiltroEstaciones-value": "true",
         "filtroscirhform:region": "5",
         "filtroscirhform:selectBusqForEstacion": "1",
         "filtroscirhform:cuenca": "-1",
         "filtroscirhform:estacion": "",
-        "g-recaptcha-response": "03AFcWeA56zbaH31i8JB7btcbWSDvzr4ynhEcD-jbVvEImZjstJEwx7hRYkKDU45x1cGfMzP5AOsRDC__mXdt5vlvG4yxt5qq7MIzaU0BJAfIJWtYpgbF4prP1N6nskFvCpOTdCwbXHEXb1z6UFN8xNouoP5kiKbDL6HjzRZZjw7sJ0s8I_jADAHASPsOjIvQRqKi0g5LqNTOnFeJulTI8HcqclExgaFzUEy1u6VKiq6_gQxI6S_8-yukysmFOd9EUA0f-DZw4Ho0Aa2KOJ_J_0t_pq7uR-IuEQ4gF2FXqWqcyRt4OYnuWbak1MWNAdg_BH2WtHefYfyGDn7a4kuipKp-ymBbfIY7ccjTFHZBsGbX-FZC6W98itYjl9X0UOoE5teM6V-MpQ7SdOZI7n4TjwCNMo-cju9lwzVZX4ZcUlGKvrq1U-YGZzgYNN1gvPTKifDmDG6eXj8OSJ-mLM8UYWO21nYpTVSyblTcrCkjq-ZXBLFzZobKPf3bEevP4QyU3xe6uH72QKs6yfyBQv-WyYaVZtXR_0jIv9rtaQfm7Jtbe_fg345uAyOZIEiW1JOhjMyTFMsx9nE_-P5QYowt7rzTQtxr9EF9SlOkcYkKB7vgmfYPZbnU84JiVi7-EZoyXcorCUMlTJJ3r3ajCwi1Fx5hpBYbxH1WXazNH62lKo_tDs6KjMJSNp_x9jRFkedyExHfTSWxK9xGleeeEeVcumwkoLWIMLeKUcQ",
+        "g-recaptcha-response": "",
         "filtroscirhform:j_idt100-value": "true",
-        "filtroscirhform:j_idt416": "on",
+        "filtroscirhform:j_idt181": "on",
         "filtroscirhform:j_idt102-value": "true",
-        "filtroscirhform:fechaDesdeInputDate": "10/10/1995",
-        "filtroscirhform:fechaDesdeInputCurrentDate": "06/2024",
-        "filtroscirhform:fechaHastaInputDate": "10/11/1995",
-        "filtroscirhform:fechaHastaInputCurrentDate": "06/2024",
+        "filtroscirhform:fechaDesdeInputDate": "01/01/1990",
+        "filtroscirhform:fechaDesdeInputCurrentDate": "01/2011",
+        "filtroscirhform:fechaHastaInputDate": "31/12/2010",
+        "filtroscirhform:fechaHastaInputCurrentDate": "12/2011",
         "filtroscirhform:generarxls": "Generar XLS",
-        "javax.faces.ViewState": "-3211668912581163705:3287580506365806890"
+        "javax.faces.ViewState": "-1017629065942579622:-7489475727910640494"
     }
 }

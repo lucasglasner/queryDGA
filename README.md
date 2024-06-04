@@ -5,24 +5,36 @@ Simple program to download public hydrometeorological data from DGA (Direccion G
 The idea is the following:
 
 1) Enter https://snia.mop.gob.cl/BNAConsultas/reportes
-2) Select variable and a station for download
+2) Select variable and a region
 3) Solve the captcha manually
-4) Inspect the download button
-5) Go to network options, press the button and then get the cURL (POSIX) request
-6) Go to [https://curlconverter.com/json/](https://curlconverter.com/json/) and transform cURL request to json
-7) Copy json content to DGA_cURL.json file. The file should have something like this in the "data" key:
+4) Select a station to download and select a random time range (just a month is enough)
+5) Inspect the download button (before using it)
+6) Go to network options, press the button and then get the cURL (POSIX) request
+7) Go to [https://curlconverter.com/json/](https://curlconverter.com/json/) and transform cURL request to json
+8) Copy json content to DGA_cURL.json file. The file should have something like this in the "data" key:
 
    ```text
-       "filtroscirhform:j_idt100-value": "true",
-       "filtroscirhform:j_idt177": "on",
-       "filtroscirhform:j_idt102-value": "true",
-       "filtroscirhform:fechaDesdeInputDate": "01/01/1990",
-       "filtroscirhform:fechaDesdeInputCurrentDate": "05/2024",
-       "filtroscirhform:fechaHastaInputDate": "31/01/1992",
-       "filtroscirhform:fechaHastaInputCurrentDate": "05/2024",
+           "filtroscirhform": "filtroscirhform",
+           "filtroscirhform:regionFieldSetId-value": "true",
+           "filtroscirhform:j_idt30-value": "filtroscirhform:j_idt45",
+           "filtroscirhform:j_idt59": "on",
+           "filtroscirhform:panelFiltroEstaciones-value": "true",
+           "filtroscirhform:region": "5",  <------------------------ USER SELECTED REGION IN THE WEBPAGE (NOT LOOPABLE)
+           "filtroscirhform:selectBusqForEstacion": "1",
+           "filtroscirhform:cuenca": "-1",
+           "filtroscirhform:estacion": "",
+           "g-recaptcha-response": "",
+           "filtroscirhform:j_idt100-value": "true",
+           "filtroscirhform:j_idt181": "on",           <------------------------ STATION ID (LOOPABLE)
+           "filtroscirhform:j_idt102-value": "true",
+           "filtroscirhform:fechaDesdeInputDate": "01/01/1990",     <------------------------ START DATE (LOOPABLE)
+           "filtroscirhform:fechaDesdeInputCurrentDate": "01/2011", 
+           "filtroscirhform:fechaHastaInputDate": "31/12/2010",
+           "filtroscirhform:fechaHastaInputCurrentDate": "12/2011",     <------------------------ END DATE (LOOPABLE)
+           "filtroscirhform:generarxls": "Generar XLS",
+           "javax.faces.ViewState": "-1017629065942579622:-7489475727910640494"
    ```
-8) Check DGA_query.ipynb to learn how to download
-9) Check DGA_process.ipynb to postprocess the spreadsheets
+9) example.ipynb to learn how to download and postprocess DGA spreadsheets
 
 ---
 
