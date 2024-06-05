@@ -7,9 +7,11 @@ The idea is the following:
 1) Enter https://snia.mop.gob.cl/BNAConsultas/reportes
 2) Select variable and a region
 3) Solve the captcha manually
+   ![alt](static/DGA_captcha.png)
 4) Select a station to download and select a random time range (just a month is enough)
 5) Inspect the download button (before using it)
 6) Go to network options, press the button and then get the cURL (POSIX) request
+   ![alt](static/DGA_cURL.png)
 7) Go to [https://curlconverter.com/json/](https://curlconverter.com/json/) and transform cURL request to json
 8) Copy json content to DGA_cURL.json file. The file should have something like this in the "data" key:
 
@@ -34,7 +36,7 @@ The idea is the following:
            "filtroscirhform:generarxls": "Generar XLS",
            "javax.faces.ViewState": "-1017629065942579622:-7489475727910640494"
    ```
-9) example.ipynb to learn how to download and postprocess DGA spreadsheets
+9)  example.ipynb to learn how to download and postprocess DGA spreadsheets
 
 ---
 
