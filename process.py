@@ -27,7 +27,7 @@ def DGAGrab_Metadata(DGA_excel):
 def process_DGA_QTable(DGA_excel):
     # Drop usesless stuff from spreadsheet and compute metadata
     DGA_excel = DGA_excel.T.dropna(how='all').T
-    metadata  = DGAGrab_Metadata(DGA_excel)
+    metadata = DGAGrab_Metadata(DGA_excel)
 
     # grab only necesary cells
     months = DGA_excel[DGA_excel.iloc[:, 0].map(lambda x: 'MES' in str(x))]
@@ -53,6 +53,7 @@ def process_DGA_QTable(DGA_excel):
     data = pd.DataFrame([runoff, heights], index=['q_m3s', 'h_m']).T.dropna()
     data.name = metadata.columns[0]
     data.index = pd.to_datetime(timestamp, format='%H:%MT%d/%m/%Y')
+    data = data.sort_index()
     return data, metadata
 
 
@@ -73,6 +74,7 @@ def process_DGA_PrMaxTable(DGA_excel):
     data.name = metadata.columns[0]
     data = pd.DataFrame(pd.to_numeric(data))
     data.index = timestamp
+    data = data.sort_index()
     return data, metadata
 
 
@@ -87,25 +89,27 @@ def process_DGA_Pr24hTable(DGA_excel):
     years = data.loc[years].index
     ndata = []
     for yr in years:
-        x = data.loc[(yr+2):(yr+31+1)].iloc[:, 1:]
-        yr = np.tile(data.loc[yr].iloc[0].split(' ')[-1], 12*31)
-        m = np.hstack([np.ones(31)*y for y in range(1, 12+1, 1)])
-        d = np.tile(np.arange(1, 31+1, 1), 12)
-        tt = pd.DataFrame([yr, m, d]).T.map(lambda x: str(int(x)))
-        tt = tt[0]+'-'+tt[1]+'-'+tt[2]
-        tt = tt.values
-        timestamp = []
-        for t in tt:
-            try:
-                timestamp.append(pd.to_datetime(t))
-            except:
-                timestamp.append(np.nan)
+        stryr = DGA_excel.loc[yr].iloc[0].split(' ')[-1]
 
-        x = pd.Series(x.values.flatten(), index=timestamp)
-        ndata.append(x)
-    ndata = pd.concat(ndata)
-    ndata = ndata.dropna()
-    ndata = ndata.loc[ndata.index.notnull()]
+        # Get excel data table for given year
+        table = data.loc[(yr+2):(yr+31+1)].iloc[:, 1:]
+        ntable = []
+        for m in range(1, 12+1):
+            # Loop over months, get data and build timestamp
+            month = str(m).zfill(2)
+            mdata = table.iloc[:, m-1]
+            mdata.index = [stryr+'-'+month+'-'+str(day).zfill(2)
+                           for day in range(1, len(mdata)+1)]
+            # Dropna with remove NaN values and bullshit like Febraury 31
+            ntable.append(mdata.dropna())
+        # Join month data to the full 1D year
+        ntable = pd.concat(ntable, axis=0)
+        ntable.index = pd.to_datetime(ntable.index)  # Set index as timestamp
+        # Fill missing days with NaN
+        ntable = ntable.reindex(pd.date_range(f'{stryr}-01-01', f'{stryr}-12-31',
+                                              freq='d'))
+        ndata.append(ntable)
+    ndata = pd.concat(ndata, axis=0).sort_index()
     ndata.name = metadata.columns[0]
     return ndata, metadata
 

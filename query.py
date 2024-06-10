@@ -61,7 +61,7 @@ def DGA_makerequest(ofile, url, cookies, headers, data):
         with open(ofile, 'wb') as file:
             file.write(response.content)
     else:
-        print('Request ended with:', response.status_code, 'Trying again...')
+        # print('Request ended with:', response.status_code, 'Trying again...')
         time.sleep(2)
         return DGA_makerequest(ofile, url, cookies, headers, data)
     if os.path.isfile(ofile):
