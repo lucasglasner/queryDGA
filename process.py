@@ -12,6 +12,15 @@ import numpy as np
 
 
 def DGAGrab_Metadata(DGA_excel):
+    """
+    From an loaded DGA excel spreadsheet recover the station metadata
+
+    Args:
+        DGA_excel (pandas): loaded DGA spreadsheet
+
+    Returns:
+        (pandas): metadata table
+    """
     metadata = DGA_excel.iloc[4:8, :].T.dropna(how='all').T
     name, stid, c1, c2 = metadata.iloc[:, 1]
     z, lat, lon = metadata.iloc[1:, 3]
@@ -25,6 +34,15 @@ def DGAGrab_Metadata(DGA_excel):
 
 
 def process_DGA_QTable(DGA_excel):
+    """
+    Process the DGA spreasheed with instantaneous discharge measurements
+
+    Args:
+        DGA_excel (pandas): loaded DGA spreadsheet
+
+    Returns:
+        (pandas): dataframe with exctracted time series
+    """
     # Drop usesless stuff from spreadsheet and compute metadata
     DGA_excel = DGA_excel.T.dropna(how='all').T
     metadata = DGAGrab_Metadata(DGA_excel)
@@ -58,6 +76,15 @@ def process_DGA_QTable(DGA_excel):
 
 
 def process_DGA_PrMaxTable(DGA_excel):
+    """
+    Postprocess DGA spreadsheet with maximum precipitation in 24 hrs (yearly)
+
+    Args:
+        DGA_excel (pandas): loaded DGA spreadsheet
+
+    Returns:
+        (pandas): dataframe with exctracted time series
+    """
     # Drop usesless stuff from spreadsheet and compute metadata
     DGA_excel = DGA_excel.T.dropna(how='all').T
     metadata = DGAGrab_Metadata(DGA_excel)
@@ -79,6 +106,15 @@ def process_DGA_PrMaxTable(DGA_excel):
 
 
 def process_DGA_Pr24hTable(DGA_excel):
+    """
+    Postprocess DGA spreadsheet with daily precipitation records
+
+    Args:
+        DGA_excel (pandas): loaded DGA spreadsheet
+
+    Returns:
+        (pandas): dataframe with exctracted time series
+    """
     # Drop usesless stuff from spreadsheet and compute metadata
     DGA_excel = DGA_excel.T.dropna(how='all').T
     metadata = DGAGrab_Metadata(DGA_excel)
@@ -115,6 +151,16 @@ def process_DGA_Pr24hTable(DGA_excel):
 
 
 def process_DGAtable(DGA_excel, vtype):
+    """
+    postprocess of DGA spreadsheets for different variables
+
+    Args:
+            DGA_excel (pandas): loaded DGA spreadsheet
+            vtype (str): DGA variable to postprocess
+
+        Returns:
+            (tuple): tuple with timeseries and metadata dataframes
+    """
     DGA_excel = DGA_excel.T.dropna(how='all').T
     if vtype == 'AlturayCaudalInstantaneo':
         data, metadata = process_DGA_QTable(DGA_excel)

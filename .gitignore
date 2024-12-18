@@ -4,3 +4,4 @@
 vismet
 DGA_process.ipynb
 DGA_query.ipynb
+__pycache__/*
