@@ -38,6 +38,8 @@ La idea es la siguiente:
    ```
 9) Ver el archivo example.ipynb para ver como descargar y postprocesar planillas de datos de la DGA
 
+Es importante destacar que el sitio web no se puede iterar para descargar toda la información de manera automática debido al captcha presente en la misma. Adicionalmente, el captcha se encuentra después de haber seleccionado la variable y región de interés por lo que cualquier iteración o descarga masiva de datos está determinada a una única región y variable. Para querer bajar datos de múltiples regiones y variables es necesario resolver el captcha manualmente cada vez y luego utilizar el paquete en el momento de la descarga.
+
 ---
 
 ### Requisitos (paquetes)
