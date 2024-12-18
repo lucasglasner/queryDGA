@@ -36,7 +36,7 @@ La idea es la siguiente:
            "filtroscirhform:generarxls": "Generar XLS",
            "javax.faces.ViewState": "-1017629065942579622:-7489475727910640494"
    ```
-9) Ver el archivo example.ipynb to learn para ver como descargar y postprocesar planillas de datos de la DGA
+9) Ver el archivo example.ipynb para ver como descargar y postprocesar planillas de datos de la DGA
 
 ---
 
